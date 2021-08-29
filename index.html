@@ -8,6 +8,34 @@
   <title></title>
   </head>
   <body>
-<iframe src="https://web.powerva.microsoft.com/environments/Default-3ec92969-5a51-4f18-8ac9-ef98fbafa978/bots/new_bot_51699332add344eab2e525057335bc83/webchat" frameborder="0" style="width: 100%; height: 100%;">
+<div class="container" style="order: 3; position: relative; width: 400px; min-width: 400px; height: 100%;">
+    <div>
+      <div role="main"></div>
+    </div>
+    <script src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"></script>
+    <script>
+      document.querySelectorAll('[role="main"]')[0].setAttribute("id", "webchat");
+      const styleOptions = {
+        // Add styleOptions to customize web chat canvas
+        hideUploadButton: true,
+      };
+
+      var BOT_ID = "51699332-add3-44ea-b2e5-25057335bc83";
+      var theURL = "https://powerva.microsoft.com/api/botmanagement/v1/directline/directlinetoken?botId=" + BOT_ID;
+      fetch(theURL)
+        .then(response => response.json())
+        .then(conversationInfo => {
+          window.WebChat.renderWebChat({
+              directLine: window.WebChat.createDirectLine({
+                token: conversationInfo.token,
+              }),
+              styleOptions
+            },
+            document.getElementById('webchat')
+          );
+        })
+        .catch(err => console.error("An error occurred: " + err));
+    </script>
+  </div>
   </body>
 </html>
