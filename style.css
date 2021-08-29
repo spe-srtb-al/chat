@@ -1,0 +1,24 @@
+/* CSS Document */
+.main {
+    margin: 18px;
+    border-radius: 4px;
+}
+
+div[role="form"]{
+    background-color: black;
+} 
+div[role="log"]{
+    background: gainsboro;
+}
+div[role="status"]{
+    background: darkgray;
+} 
+
+#webchat {
+    position: fixed;
+    height: calc(100% - 135px);
+    z-index: 9999;
+    width: 400px;
+    top: 132px;
+    overflow: hidden;
+}
