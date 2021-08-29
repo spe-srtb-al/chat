@@ -11,14 +11,6 @@ div[role="log"]{
     background: gainsboro;
 }
 div[role="status"]{
-    background: darkgray;
+    background: darkgray
+        display:;
 } 
-
-#webchat {
-    position: fixed;
-    height: calc(100% - 135px);
-    z-index: 9999;
-    width: 400px;
-    top: 132px;
-    overflow: hidden;
-}
