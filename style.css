@@ -12,5 +12,5 @@ div[role="log"]{
 }
 div[role="status"]{
     background: darkgray
-        display:;
+        display: inline-block;
 } 
