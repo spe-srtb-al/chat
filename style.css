@@ -1,6 +1,6 @@
 /* CSS Document */
 .main {
-    margin: 18px; 
+    margin: 18px;
     border-radius: 4px;
 }
 
@@ -12,5 +12,13 @@ div[role="log"]{
 }
 div[role="status"]{
     background: darkgray;
-        display: inline-block;
 } 
+
+#webchat {
+    position: fixed;
+    height: calc(100% - 135px);
+    z-index: 9999;
+    width: 100%;
+    top: 132px;
+    overflow: hidden;
+}
